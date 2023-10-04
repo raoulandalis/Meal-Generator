@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from 'react'
+import GenerateRecipe from './GenerateRecipe'
 
 const ToggleToInput = () => {
     const [visible, setVisible] = useState(true)
@@ -9,9 +10,13 @@ const ToggleToInput = () => {
     }
   return (
     <div>
-        <button className='enter-btn' onClick={toggleInput}>
-            Start
-        </button>
+        {visible ? (
+          <button className='enter-btn' onClick={toggleInput}>
+              Start
+          </button>
+        ) : (
+          <GenerateRecipe />
+        )}
     </div>
   )
 }
