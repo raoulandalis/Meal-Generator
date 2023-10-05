@@ -8,13 +8,13 @@ interface MealFetchProps {
 
 const MealFetch = ({ingredients}: MealFetchProps) => {
 
-    // let result;
+    let result;
 
     const recipeAPICall = async () => {
         // setLoading(true);
         // setError(null);
         //try/catch block that generates response - uses axios
-        let result;
+        // let result;
         try {
             const response = await fetch(
                 `https://api.edamam.com/search?q=${encodeURIComponent(ingredients)}&app_id=${'0f41090f'}&app_key=${'c2869ac02b6a4dfa5df6fe3d9ae6559b'}`);
@@ -28,9 +28,9 @@ const MealFetch = ({ingredients}: MealFetchProps) => {
         }
     }
 
-    let data = recipeAPICall()
+    // let data = recipeAPICall()
 
-    console.log('res============================', data)
+    console.log('res============================',result)
 
   return (
     <>
